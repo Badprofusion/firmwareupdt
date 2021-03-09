@@ -1,14 +1,16 @@
+import os
+import sys
+#sys.path.append('C:/comgas/FIRMWARE/utils/lib')
+sys.path.append('/home/pi/pitagoras/devops/comgas/FIRMWARE/utils/lib')
 import vars
 ##Version 1.0
-vars.Version="3.0"
+vars.Version="1.0"
 
 import uuid
 import threading
-import os
-import sys
+
 import time
-#sys.path.append('C:/comgas/FIRMWARE/utils/lib')
-sys.path.append('/home/pi/pitagoras/devops/comgas/FIRMWARE/utils/lib')
+
 import defs
 from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 
