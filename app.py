@@ -1,6 +1,6 @@
 import vars
 ##Version 1.0
-vars.Version="1.0"
+vars.Version="3.0"
 
 import uuid
 import threading
