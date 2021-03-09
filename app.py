@@ -1,14 +1,13 @@
-##Version 2.0
-Version="2.0"
-
 import uuid
 import threading
 import os
 import sys
 import time
-#sys.path.append('C:/FIRMWARE/utils/lib')
+#sys.path.append('C:/comgas/FIRMWARE/utils/lib')
 sys.path.append('/home/pi/pitagoras/devops/comgas/FIRMWARE/utils/lib')
 import vars
+##Version 1.0
+vars.Version="1.0"
 import defs
 from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 
@@ -31,8 +30,8 @@ def app():
         twin_update_listener_thread.daemon = True
         twin_update_listener_thread.start()
         ##Twin report patch
-        #reported_patch = {"Customer": "Microsoft"}
-        #vars.client.patch_twin_reported_properties(reported_patch)
+        reported_patch = {"FirmwareVersion": vars.Version}
+        vars.client.patch_twin_reported_properties(reported_patch)
         if vars.registration_result.status == "assigned": print("Provision result: ", vars.registration_result.status)
         while True:
             defs.send_mqtt()
@@ -43,3 +42,6 @@ if __name__ == '__main__':
     print ( "Starting App" )
     print ( "Press Ctrl-C to exit" )
     app()
+
+
+
