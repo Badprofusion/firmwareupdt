@@ -7,7 +7,7 @@ import time
 sys.path.append('/home/pi/pitagoras/devops/comgas/FIRMWARE/utils/lib')
 import vars
 ##Version 1.0
-vars.Version="1.0"
+vars.Version="3.0"
 import defs
 from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 
