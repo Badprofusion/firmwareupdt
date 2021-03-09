@@ -3,8 +3,8 @@ import sys
 #sys.path.append('C:/comgas/FIRMWARE/utils/lib')
 sys.path.append('/home/pi/pitagoras/devops/comgas/FIRMWARE/utils/lib')
 import vars
-##Version 3.0
-vars.Version="3.0"
+##Version 4.0
+vars.Version="4.0"
 
 import uuid
 import threading
